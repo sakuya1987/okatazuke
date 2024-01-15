@@ -1,0 +1,39 @@
+
+<div class="form-structor">
+	<div class="signup">
+		<h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
+		<div class="form-holder">
+
+    <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="input">
+      <%#%= f.label :nickname %>
+    <%= f.text_field :nickname, autofocus: true, class:"input", id:"nickname", placeholder:"ニックネーム", autocomplete: "nickname" %>
+   </div>
+
+   <div class="input">
+    <%#%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, class:"input", id:"email", placeholder:"メールアドレス", autocomplete: "email" %>
+      </div>
+
+    <div class="input">
+    <%#%= f.label :password %>
+    <%= f.password_field :password, class:"input", placeholder:"パスワード", id:"password",autocomplete: "new-password" %>
+   </div>
+
+   <div class="input">
+    <%#%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class:"input", placeholder:"同じパスワード", id:"password-confirmation",autocomplete: "new-password" %>
+   </div>
+
+    <div class="button">
+    <%= f.submit "Sign up" ,class:"submit-btn"%>
+    </div>
+    <% end %>
+
+		</div>
+	</div>
+</div>
+
+<%#%= render "devise/shared/links" %>

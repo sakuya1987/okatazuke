@@ -1,0 +1,147 @@
+/* リセットCSS */
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+/* 
+** The Header Media Queries **
+** Tweak as per your needs **
+*/
+.brand {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0px 20px;
+ }
+
+.site-header {
+  position: relative;
+  background-color: #def7ff; }
+
+.site-header__wrapper {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  @media (min-width: 600px) {
+    .site-header__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0;
+      padding-bottom: 0; } }
+@media (min-width: 600px) {
+  .nav__wrapper {
+    display: flex; } }
+
+@media (max-width: 599px) {
+  .nav__wrapper {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #d9f0f7;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; }
+    .nav__wrapper.active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0); } }
+
+.nav__item a {
+  display: block;
+  padding: 1.5rem 1rem; }
+
+.nav__toggle {
+  display: none; }
+  @media (max-width: 599px) {
+    .nav__toggle {
+      display: block;
+      position: absolute;
+      right: 1rem;
+      top: 1rem; } }
+
+  a {	
+        text-decoration: none;
+        color: #4b4b4b;
+     }
+  ul {
+      list-style: none;
+      margin: 0;
+      display: flex;
+   }
+   .nav__item1  {
+    display: block;
+    font-weight: bold;
+    padding: 1.5rem 1rem; }
+
+    /******************************************************** 
+　トップページ 
+********************************************************/
+.hero {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 30%;
+}
+
+.hero-items {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: calc(50% - 35px);
+  width: 100%;
+  padding: 0 60px;
+}
+
+.hero-text__main {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.hero-text__sub {
+  margin-top: 10px;
+  padding-left: 6px;
+  font-size: 18px;
+}
+
+.service-btn {
+  width: 250px;
+  height: 100px;
+  line-height: 100px;
+  background-color: #F0F0F0;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.service-btn a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 600;
+}
+    /******************************************************** 
+　タイマー
+********************************************************/
+select{
+  width: 50px;
+}
+.is-hidden {
+  display:none
+}
